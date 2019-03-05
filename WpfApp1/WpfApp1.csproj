@@ -68,6 +68,7 @@
     <Compile Include="EnterForm.xaml.cs">
       <DependentUpon>EnterForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyId.cs" />
     <Compile Include="RegisterForm.xaml.cs">
       <DependentUpon>RegisterForm.xaml</DependentUpon>
     </Compile>

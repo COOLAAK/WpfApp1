@@ -20,7 +20,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        int? MyId = null;
+        //int? MyId = null;
+        MyId id = new MyId();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace WpfApp1
        
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            EnterForm dlg = new EnterForm(ref  MyId);
+            EnterForm dlg = new EnterForm(id);
             dlg.ShowDialog();
         }
 
@@ -41,7 +42,7 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(MyId.ToString());
+            MessageBox.Show(id.MyRealId.ToString());
         }
     }
 }

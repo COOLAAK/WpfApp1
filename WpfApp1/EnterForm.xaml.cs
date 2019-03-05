@@ -19,9 +19,11 @@ namespace WpfApp1
     /// </summary>
     public partial class EnterForm : Window
     {
-        int? MyId = null;
-        public EnterForm(ref int? MyId)
+        //int? MyId = null;
+        MyId id;
+        public EnterForm(MyId id)
         {
+            this.id = id;
             InitializeComponent();
         }
 
@@ -33,9 +35,11 @@ namespace WpfApp1
             {
                 if(Usr[0]. Passwd==PasswdTextBox.Text)
                 {
-                    MyId = Usr[0].Id;
+                    
+                    id.MyRealId = Usr[0].Id;
                 }
             }
+            this.Close();
         }
     }
 }
